@@ -1,0 +1,34 @@
+# Dependências do Node.js
+node_modules/
+
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Diretório de build
+.next/
+.nuxt/
+dist/
+build/
+
+# Vercel files
+.vercel/
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs do sistema
+logs/
+*.log
+
+# Arquivos temporários
+tmp/

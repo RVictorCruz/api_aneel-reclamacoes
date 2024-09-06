@@ -5,18 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentação da API - Concessionárias</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #eaf6ff;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .bem-vindo {
+        text-align: center;
+      }
+
+      h1 {
+        background-color: #52d0f4;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      h2 {
+        background-color: #6fdcf7;
+        color: #fff;
+        padding: 0.5rem;
+        border-radius: 5px;
+      }
+
+      .endpoint {
+        margin: 2rem;
+        padding: 1rem;
+        background-color: #8ce8fa;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .endpoint p,
+      .endpoint pre {
+        margin: 0.5rem 0;
+      }
+
+      .endpoint code {
+        background-color: #a8f3fc;
+        padding: 0.2rem 0.5rem;
+        border-radius: 3px;
+      }
+
+      .endpoint-link {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .endpoint-link:hover {
+        color: #52d0f4;
+      }
+
+      pre {
+        background-color: #c5ffff;
+        padding: 1rem;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
   </head>
   <body>
     <h1>Documentação da API - ANEEL Reclamações</h1>
 
-    <p>
+    <p class="bem-vindo">
       Bem-vindo à documentação da API de concessionárias. Esta API permite
       acessar informações sobre concessionárias de energia elétrica, com base em
       diferentes critérios.
     </p>
 
     <div class="endpoint">
-      <h2>1. Buscar Todas as Concessionárias</h2>
+      <h2>
+        <a href="/api/concessionarias?page=2&limit=20" class="endpoint-link"
+          >1. Buscar Todas as Concessionárias</a
+        >
+      </h2>
       <p>
         <strong>Descrição:</strong> Retorna uma lista de todas as
         concessionárias cadastradas.
@@ -54,7 +121,13 @@
     </div>
 
     <div class="endpoint">
-      <h2>2. Buscar Concessionária por Nome</h2>
+      <h2>
+        <a
+          href="/api/concessionarias/nome/Amazonas%20Energia"
+          class="endpoint-link"
+          >2. Buscar Concessionária por Nome</a
+        >
+      </h2>
       <p>
         <strong>Descrição:</strong> Retorna uma concessionária com base no nome
         fornecido.
@@ -94,7 +167,11 @@
     </div>
 
     <div class="endpoint">
-      <h2>3. Buscar Concessionária por CNPJ</h2>
+      <h2>
+        <a href="/api/concessionarias/cnpj/2341467000120" class="endpoint-link"
+          >3. Buscar Concessionária por CNPJ</a
+        >
+      </h2>
       <p>
         <strong>Descrição:</strong> Retorna uma concessionária com base no CNPJ
         fornecido.
@@ -134,7 +211,11 @@
     </div>
 
     <div class="endpoint">
-      <h2>4. Buscar Concessionárias por Sigla de UF</h2>
+      <h2>
+        <a href="/api/concessionarias/uf/AM" class="endpoint-link"
+          >4. Buscar Concessionárias por Sigla de UF</a
+        >
+      </h2>
       <p>
         <strong>Descrição:</strong> Retorna uma lista de concessionárias com
         base na sigla do estado (UF) fornecida.
