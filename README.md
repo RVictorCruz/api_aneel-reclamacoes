@@ -5,7 +5,8 @@
 Esta API fornece informações sobre concessionárias de energia elétrica com base em diferentes critérios. Ela permite acessar dados como nome, CNPJ, município, e muito mais.
 
 <div align="center">
-![image2](https://github.com/user-attachments/assets/a4deae08-ae09-4bb6-9711-8e02045729ce)
+  <img src= "https://github.com/user-attachments/assets/a4deae08-ae09-4bb6-9711-8e02045729ce">
+
   
 </div>
 <div>
