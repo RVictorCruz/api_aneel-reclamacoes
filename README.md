@@ -10,9 +10,9 @@ Esta API fornece informações sobre concessionárias de energia elétrica com b
   
 </div>
 <div>
-  
+  <img src= "https://github.com/user-attachments/assets/44759d3e-085f-4887-8316-fbb5ef882678">
 </div>
-![Dados trazidos pela api](api-imagens/image.png)
+
 
 
 ## Índice
