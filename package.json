@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",  // Adiciona suporte para desenvolvimento com nodemon
+    "dev": "nodemon server.js",
     "build": "echo \"No build step needed for Node.js application.\" && exit 0"
   },
   "keywords": [],
