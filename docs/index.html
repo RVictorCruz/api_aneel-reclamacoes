@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentação da API - Concessionárias</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Documentação da API - ANEEL Reclamações</h1>
+
+    <p>
+      Bem-vindo à documentação da API de concessionárias. Esta API permite
+      acessar informações sobre concessionárias de energia elétrica, com base em
+      diferentes critérios.
+    </p>
+
+    <div class="endpoint">
+      <h2>1. Buscar Todas as Concessionárias</h2>
+      <p>
+        <strong>Descrição:</strong> Retorna uma lista de todas as
+        concessionárias cadastradas.
+      </p>
+      <p><strong>URL:</strong> <code>/api/concessionarias</code></p>
+      <p><strong>Método:</strong> GET</p>
+      <p><strong>Resposta:</strong></p>
+      <pre>
+[
+    {
+        "_id": "60d21b4667d0d8992e610c85",
+        "DatGeracaoConjuntoDados": "2024-09-05",
+        "DatReferencia": "2024-02-29",
+        "SigAgente": "Amazonas Energia",
+        "NumCPFCNPJ": "2341467000120",
+        "CodMunicipio": "1302603",
+        "NomMunicipio": "Manaus",
+        "SigUF": "AM",
+        "SigRegiao": "N",
+        "NomClassificacaoAgente": "Concessionaria",
+        "CodTipoReclamacao": "1021202",
+        "NomCanalReclamacao": "Nivel 1",
+        "DescReclamacao": "Poste",
+        "QtdReclamacoesRecebidas": "3",
+        "QtdReclamacoesImprocedentes": "0",
+        "QtdReclamacoesProcedentes": "1",
+        "NumPrazoMedioSolucao": "20.08",
+        "DscFormaContato": "Telefonico",
+        "NumOuvPrazoMedioSolucaoImproc": "",
+        "NumSacPrazoMedioSolucaoImproc": ""
+    }
+]
+        </pre
+      >
+    </div>
+
+    <div class="endpoint">
+      <h2>2. Buscar Concessionária por Nome</h2>
+      <p>
+        <strong>Descrição:</strong> Retorna uma concessionária com base no nome
+        fornecido.
+      </p>
+      <p>
+        <strong>URL:</strong> <code>/api/concessionarias/nome/:SigAgente</code>
+      </p>
+      <p><strong>Método:</strong> GET</p>
+      <p><strong>Parâmetros:</strong></p>
+      <pre><code>SigAgente: Nome da concessionária</code></pre>
+      <p><strong>Resposta:</strong></p>
+      <pre>
+{
+    "_id": "60d21b4667d0d8992e610c85",
+    "DatGeracaoConjuntoDados": "2024-09-05",
+    "DatReferencia": "2024-02-29",
+    "SigAgente": "Amazonas Energia",
+    "NumCPFCNPJ": "2341467000120",
+    "CodMunicipio": "1302603",
+    "NomMunicipio": "Manaus",
+    "SigUF": "AM",
+    "SigRegiao": "N",
+    "NomClassificacaoAgente": "Concessionaria",
+    "CodTipoReclamacao": "1021202",
+    "NomCanalReclamacao": "Nivel 1",
+    "DescReclamacao": "Poste",
+    "QtdReclamacoesRecebidas": "3",
+    "QtdReclamacoesImprocedentes": "0",
+    "QtdReclamacoesProcedentes": "1",
+    "NumPrazoMedioSolucao": "20.08",
+    "DscFormaContato": "Telefonico",
+    "NumOuvPrazoMedioSolucaoImproc": "",
+    "NumSacPrazoMedioSolucaoImproc": ""
+}
+        </pre
+      >
+    </div>
+
+    <div class="endpoint">
+      <h2>3. Buscar Concessionária por CNPJ</h2>
+      <p>
+        <strong>Descrição:</strong> Retorna uma concessionária com base no CNPJ
+        fornecido.
+      </p>
+      <p>
+        <strong>URL:</strong> <code>/api/concessionarias/cnpj/:NumCPFCNPJ</code>
+      </p>
+      <p><strong>Método:</strong> GET</p>
+      <p><strong>Parâmetros:</strong></p>
+      <pre><code>NumCPFCNPJ: Número do CNPJ</code></pre>
+      <p><strong>Resposta:</strong></p>
+      <pre>
+{
+    "_id": "60d21b4667d0d8992e610c85",
+    "DatGeracaoConjuntoDados": "2024-09-05",
+    "DatReferencia": "2024-02-29",
+    "SigAgente": "Amazonas Energia",
+    "NumCPFCNPJ": "2341467000120",
+    "CodMunicipio": "1302603",
+    "NomMunicipio": "Manaus",
+    "SigUF": "AM",
+    "SigRegiao": "N",
+    "NomClassificacaoAgente": "Concessionaria",
+    "CodTipoReclamacao": "1021202",
+    "NomCanalReclamacao": "Nivel 1",
+    "DescReclamacao": "Poste",
+    "QtdReclamacoesRecebidas": "3",
+    "QtdReclamacoesImprocedentes": "0",
+    "QtdReclamacoesProcedentes": "1",
+    "NumPrazoMedioSolucao": "20.08",
+    "DscFormaContato": "Telefonico",
+    "NumOuvPrazoMedioSolucaoImproc": "",
+    "NumSacPrazoMedioSolucaoImproc": ""
+}
+        </pre
+      >
+    </div>
+
+    <div class="endpoint">
+      <h2>4. Buscar Concessionárias por Sigla de UF</h2>
+      <p>
+        <strong>Descrição:</strong> Retorna uma lista de concessionárias com
+        base na sigla do estado (UF) fornecida.
+      </p>
+      <p><strong>URL:</strong> <code>/api/concessionarias/uf/:SigUF</code></p>
+      <p><strong>Método:</strong> GET</p>
+      <p><strong>Parâmetros:</strong></p>
+      <pre><code>SigUF: Sigla do estado (UF)</code></pre>
+      <p><strong>Resposta:</strong></p>
+      <pre>
+[
+    {
+        "_id": "60d21b4667d0d8992e610c85",
+        "DatGeracaoConjuntoDados": "2024-09-05",
+        "DatReferencia": "2024-02-29",
+        "SigAgente": "Amazonas Energia",
+        "NumCPFCNPJ": "2341467000120",
+        "CodMunicipio": "1302603",
+        "NomMunicipio": "Manaus",
+        "SigUF": "AM",
+        "SigRegiao": "N",
+        "NomClassificacaoAgente": "Concessionaria",
+        "CodTipoReclamacao": "1021202",
+        "NomCanalReclamacao": "Nivel 1",
+        "DescReclamacao": "Poste",
+        "QtdReclamacoesRecebidas": "3",
+        "QtdReclamacoesImprocedentes": "0",
+        "QtdReclamacoesProcedentes": "1",
+        "NumPrazoMedioSolucao": "20.08",
+        "DscFormaContato": "Telefonico",
+        "NumOuvPrazoMedioSolucaoImproc": "",
+        "NumSacPrazoMedioSolucaoImproc": ""
+    }
+]
+        </pre
+      >
+    </div>
+  </body>
+</html>
