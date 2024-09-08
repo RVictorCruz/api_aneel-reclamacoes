@@ -1,17 +1,25 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors"); // Importar o pacote cors
 const path = require("path");
 require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
+// Middleware para habilitar CORS para qualquer origem
+app.use(
+  cors({
+    origin: "*", // Permite requisições de qualquer origem
+    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
+  })
+);
+
+// Middleware para analisar requisições JSON e URL-encoded
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Conectar ao MongoDB
-mongoose;
 mongoose
   .connect(process.env.MONGODB_URI, {
     dbName: "aneel_reclamacoes", // Especifica o nome do banco de dados
